@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet, Dimensions, TouchableOpacity } from "react-native";
-import { Link, useNavigation } from "expo-router";
+import { Link, useNavigation, useRouter } from "expo-router";
 import { Image } from 'expo-image';
 import { useEffect, useState } from "react";
 
@@ -64,6 +64,7 @@ const styles = StyleSheet.create({
 export default function Index() {
   const navigation = useNavigation();
   const [isPressed, setIsPressed] = useState(false);
+  const router=useRouter();
 
   useEffect(() => {
     navigation.setOptions({
@@ -86,7 +87,10 @@ export default function Index() {
         </Text>
         <TouchableOpacity
           style={isPressed ? styles.buttonPressed : styles.button}
-          onPressIn={() => setIsPressed(true)}
+          onPressIn={() => {
+            setIsPressed(true)
+            router.push("./login")
+          }}
           onPressOut={() => setIsPressed(false)}
         >
           <Text style={styles.buttonText}>Get Started</Text>

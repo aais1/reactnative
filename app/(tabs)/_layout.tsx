@@ -14,7 +14,7 @@ export default function TabLayout() {
         backgroundColor: '#25292e',
         },
       }}>
-      <Tabs.Screen name="index" options={
+      <Tabs.Screen name="home" options={
         { title: 'Home',
             tabBarIcon: ({ color, focused }) => (
                 <Ionicons name={focused ? 'home-sharp' : 'home-outline'} color={color} size={24} />
