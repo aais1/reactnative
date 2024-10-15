@@ -11,7 +11,7 @@ export default function TabLayout() {
         headerShadowVisible: false,
         headerTintColor: '#fff',
         tabBarStyle: {
-        backgroundColor: '#25292e',
+        backgroundColor: 'black',
         },
       }}>
       <Tabs.Screen name="home" options={
